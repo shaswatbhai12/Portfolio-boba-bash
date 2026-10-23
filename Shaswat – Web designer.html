@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaswat – Web designer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#f7f7f5;
+  --ink:#161616;
+  --muted:#6d6d69;
+  --accent:#0f5b3a;
+  color-scheme:light dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121211;--ink:#efefec;--muted:#92928d;--accent:#8fd6ae}
+}
+:root[data-theme="dark"]{--bg:#121211;--ink:#efefec;--muted:#92928d;--accent:#8fd6ae}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Hanken Grotesk",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.page{max-width:1080px;margin:0 auto;padding:0 28px}
+
+header{display:flex;justify-content:space-between;padding:32px 0 0;font-weight:500}
+header nav{display:flex;gap:28px;color:var(--muted)}
+header nav a:hover{color:var(--ink)}
+
+.intro{padding:18vh 0 20vh}
+.intro h1{font-weight:500;font-size:clamp(2rem,5.6vw,4.4rem);line-height:1.08;letter-spacing:-.03em;margin:0;max-width:19ch}
+
+h2{font-size:1rem;font-weight:500;color:var(--muted);margin:0 0 28px}
+
+.work{margin-bottom:22vh}
+.work ul{list-style:none;margin:0;padding:0}
+.work a{display:grid;grid-template-columns:1.1fr 1fr auto;gap:12px 40px;align-items:baseline;padding:22px 0;transition:opacity .2s}
+.work ul:hover a{opacity:.4}
+.work ul a:hover,.work ul a:focus-visible{opacity:1}
+.work h3{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:500;letter-spacing:-.02em;margin:0;line-height:1.15}
+.work p{margin:0;color:var(--muted);max-width:40ch}
+.work small{font-size:.95rem;color:var(--muted);white-space:nowrap}
+.work a:hover h3{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:7px}
+
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:12px 40px;margin-bottom:22vh}
+.about p{margin:0;max-width:44ch;font-size:1.25rem;line-height:1.5}
+
+.contact{margin-bottom:14vh}
+.contact a{font-size:clamp(1.5rem,5vw,3.4rem);font-weight:500;letter-spacing:-.03em;overflow-wrap:anywhere;text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:9px}
+
+footer{padding:0 0 40px;color:var(--muted);font-size:.95rem;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .intro{padding:12vh 0 14vh}
+  .work a,.about{grid-template-columns:1fr}
+  .work a{padding:18px 0;gap:6px}
+  .work small{order:3}
+  .work,.about{margin-bottom:14vh}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <a href="#top">Shaswat</a>
+    <nav><a href="#work">Work</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="intro">
+      <h1>I’m Shaswat, a web designer. I build clear, fast websites for creators, student clubs and local businesses.</h1>
+    </section>
+
+    <section class="work" id="work">
+      <h2>Selected work</h2>
+      <ul>
+        <li><a href="https://get-me-a-chai-beryl.vercel.app/" target="_blank" rel="noopener"><h3>Get Me a Chai</h3><p>A crowdfunding site where creators are supported by their fans.</p><small>get-me-a-chai-beryl.vercel.app</small></a></li>
+        <li><a href="https://himalayanhackclub.xyz/" target="_blank" rel="noopener"><h3>Himalayan Hack Club</h3><p>Site for a student coding club, with events, team, gallery and a join form.</p><small>himalayanhackclub.xyz</small></a></li>
+        <li><a href="https://starliftandcontroller.xyz/" target="_blank" rel="noopener"><h3>Star Lift &amp; Controller</h3><p>Business site for an elevator company, with products, downloads and a quote form.</p><small>starliftandcontroller.xyz</small></a></li>
+      </ul>
+    </section>
+
+    <section class="about" id="about">
+      <h2>About</h2>
+      <p>I design and build each site myself, from the first layout to launch. If you need a new site or want to rework an old one, get in touch.</p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact</h2>
+      <a href="mailto:hello@shaswat.xyz">hello@shaswat.xyz</a>
+    </section>
+  </main>
+
+  <footer><span>&copy; 2026 Shaswat</span><a href="#top">Back to top</a></footer>
+</div>
+</body>
+</html>
